@@ -17,7 +17,7 @@ func startServer(router *http.ServeMux) {
 	certManager := &autocert.Manager{
 		Prompt:     autocert.AcceptTOS,
 		Cache:      autocert.DirCache("certs"),
-		HostPolicy: autocert.HostWhitelist("cubonauta.com"),
+		HostPolicy: autocert.HostWhitelist("localhost"),
 	}
 
 	go func() {
