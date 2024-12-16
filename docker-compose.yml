@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+    environment:
+      POSTGRES_USER: ${DBuser}
+      POSTGRES_PASSWORD: ${DBpass}
+      POSTGRES_DB: users
+    ports:
+      - "8080:8080"
+      - "5432:5432"
+    env_file:
+      - .env
